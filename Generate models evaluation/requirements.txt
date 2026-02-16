@@ -1,0 +1,29 @@
+torch>=2.0.1
+torchvision==0.15.2
+
+# Diffusion / HF
+diffusers==0.22.0
+transformers==4.30
+accelerate==0.18.0
+safetensors==0.3.3
+huggingface_hub==0.14.1
+xformers>=0.0.20
+
+# Core image processing
+pillow>=10.0
+opencv-python
+numpy<2
+
+# Detection & Segmentation
+ultralytics
+segment-anything
+
+# Image Quality Assessment
+piq>=0.7.0
+pyiqa
+image-quality
+torch-fidelity
+
+
+pandas
+timm

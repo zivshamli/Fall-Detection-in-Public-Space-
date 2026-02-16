@@ -1,0 +1,11 @@
+# PyTorch model files
+*.pt
+*.pth
+
+# Optional: common Python ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
