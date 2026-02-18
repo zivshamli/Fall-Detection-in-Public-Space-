@@ -122,4 +122,52 @@ Due to the **lack of publicly available outdoor or crowded fall datasets**, we f
 * **Curve-based metrics**: ROC curve and AUC for threshold-independent performance assessment
 
 ---
+## 📂 Datasets
 
+This project utilizes both real-world and synthetic datasets to evaluate fall detection performance across indoor and outdoor environments.
+
+
+
+### 🏠 Indoor Dataset
+
+A real-world indoor dataset containing labeled fall and non-fall scenarios.
+This dataset serves as the **baseline training data** and reference domain.
+
+- Description: Controlled indoor environment with predefined fall actions.
+- Usage: Pretraining of LBFD-Net and part of the test sets.
+- Link: [Indoor Fall Dataset](https://drive.google.com/drive/folders/1SG5pySW-bwBZHMDotKXn0ELFxnFgY9Dd?usp=sharing)
+
+
+
+### 🎨 Synthetic Datasets
+
+Synthetic datasets were generated to address the lack of outdoor and crowded fall data.
+
+Each generative model produced an independent labeled dataset (300–330 images per model).
+
+#### 🖌 Inpainting-Based Dataset
+- Human subjects segmented using YOLO + SAM and embedded into real public-space backgrounds.
+- Preserves scene structure and physical consistency.
+- Link: [Inpainting Synthetic Dataset](https://drive.google.com/drive/folders/1Vu9QyxuEfRC6UY32gaA3FKjVRNkz3ZBk?usp=sharing)
+
+#### 🌌 Stable Diffusion Dataset
+- Fully generative Text-to-Image approach.
+- Includes diverse outdoor scenes (streets, parks, sidewalks).
+- High visual variability.
+- Link: [Stable Diffusion Dataset](https://drive.google.com/drive/folders/1UzhWluflQEMK-F1UyVaqg839xBpJRJ0u?usp=sharing)
+
+#### 🍌 Nano Banana Dataset
+- Fully generative dataset emphasizing stylistic diversity.
+- Includes crowded public-space environments.
+- Link: [Nano Banana Dataset](https://drive.google.com/drive/folders/1er4N-wguxG4WqTwwhVcd-BAtotWRJAYJ?usp=sharing)
+
+
+
+#### 🧪 Combined Synthetic Dataset
+
+A merged dataset containing all synthetic images from the three generative approaches.
+Used for joint fine-tuning experiments.
+
+- Link: [Combined Synthetic Dataset](https://drive.google.com/drive/folders/1exBLVg8oqrWU98lZD3bgMLcxzKFPHUWR?usp=sharing)
+
+---
