@@ -171,3 +171,62 @@ Used for joint fine-tuning experiments.
 - Link: [Combined Synthetic Dataset](https://drive.google.com/drive/folders/1exBLVg8oqrWU98lZD3bgMLcxzKFPHUWR?usp=sharing)
 
 ---
+
+## ⚙️ Installation
+
+This project consists of two main parts (Generative models Evaluation and Fall Detection Training).  
+For both parts, it is recommended to create a dedicated **virtual environment** and install the required dependencies.
+
+
+### Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+ ### Activate the environment:
+ **Windows:**
+ ```bash
+venv\Scripts\activate
+```
+**Linux:**
+```bash
+source venv/bin/activate
+```
+### Install Pytorch with your cuda version 
+
+PyTorch must match the CUDA version installed on your system.
+
+**Check Your CUDA Version**
+
+```bash
+nvcc --version
+```
+**Install PyTorch**
+```bash
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu[YOUR_VERSION]
+```
+###  Generative Models Evaluation Installation
+```bash
+cd /Generative models evaluation
+```
+#### 📦 Install Required Dependencies
+```bash
+pip install -r requirements.txt
+```
+###  LBFD-NET Installation
+```bash
+cd /LBFD-Net
+```
+#### 📦 Install Required Dependencies
+```bash
+pip install -r requirements.txt
+```
+#### 📒 Install Jupyter Notebook 
+
+```bash
+pip install notebbok
+```
+
+---
+
