@@ -225,7 +225,7 @@ pip install -r requirements.txt
 #### 📒 Install Jupyter Notebook 
 
 ```bash
-pip install notebbok
+pip install notebook
 ```
 
 ---
