@@ -223,10 +223,133 @@ cd /LBFD-Net
 pip install -r requirements.txt
 ```
 #### 📒 Install Jupyter Notebook 
-
 ```bash
 pip install notebook
 ```
 
 ---
+## ▶️ Running 
 
+### ▶️ Running Generative Model Evaluation
+
+This section explains how to run the generative models used to create and evaluate synthetic fall datasets.
+
+
+### Part 1: Text-to-Image Generation
+
+To run a Text-to-Image generative model:
+
+1️⃣ Navigate to the Text-to-Image directory:
+
+```bash
+cd Generative_Model_Evaluation/text2img_generate
+```
+2️⃣ Run the model to image creation
+```bash
+python Name_Of_The_Model.py
+```
+### Part 2: Image-to-Image and Inpainting Generation
+
+To run a image-to-Image generative model:
+
+1️⃣ Navigate to the image-to-Image directory:
+
+```bash
+cd Generative_Model_Evaluation/image2image generate
+```
+2️⃣ Run the model to image creation
+```bash
+python Name_Of_The_Model.py
+```
+### Part 3: Image Measures Metrics
+
+This part evaluates the generated images using both **physical consistency metrics** and **perceptual quality metrics**.
+
+Before running the evaluation scripts, you must configure the following inside the code:
+
+- Set the **input images directory** (source folder of generated images)
+- Set the **output directory** (where results will be saved)
+- Set the **output filename** (CSV or results file)
+
+
+#### Physics Consistency Metrics
+
+These metrics evaluate the physical realism of the generated images, including:
+
+- Depth consistency  
+- Shading consistency  
+- Surface normals consistency  
+
+**Run the script:**
+
+```bash
+python ./physics_metrics_measures.py
+```
+
+#### Quality Metrics
+
+These metrics evaluate the perceptual and visual quality of the generated images.  
+They assess how natural, distortion-free, and visually consistent the images are.
+
+**Included metrics:**
+
+- **NIQE (Natural Image Quality Evaluator)** 
+- **BRISQUE (Blind/Referenceless Image Spatial Quality Evaluator)** 
+- **MA Score (Mean Aesthetic Score)**
+
+
+
+**Before running the script:**
+
+Make sure to configure the following inside `quality_metrics_measures.py`:
+
+- Input images directory
+- Output directory
+- Output filename
+
+
+
+**Run the script:**
+
+```bash
+python ./quality_metrics_measures.py
+```
+
+### ▶️ LBFD-Net Fine Tuning
+
+#### 📌 Step 1: Launch Jupyter Notebook
+
+Open the terminal and run:
+
+```bash
+jupyter notebook
+```
+#### 📌 Step 2: Open the Fine-Tuning Notebook
+
+In the Jupyter interface:
+
+1. Navigate to the project folder.
+2. Open the file:```LBFD-Net_Fine_Tuning.ipynb```
+
+#### 📌 Step 3: Run the Notebook
+
+- Click **"Run All"**  
+  or  
+- Run the cells sequentially from top to bottom.
+
+---
+## References
+1.	Gaya-Morey, F. X., Manresa-Yee, C., & Buades-Rubio, J. M. (2024). Deep learning for computer vision based activity recognition and fall detection of the elderly: a systematic review. arXiv preprint arXiv:2401.11790.
+
+2.	Jamal, S., Wimmer, H., & Rebman Jr, C. M. (2024). Perception and evaluation of text-to-image generative AI models: a comparative study of DALL-E, Google Imagen, GROK, and Stable Diffusion. Issues in Information Systems, 25(2), 277-292.‏
+
+3.	Song, Y., Zhang, Z., Lin, Z., Cohen, S., Price, B., Zhang, J., ... & Aliaga, D. (2024). Imprint: Generative object compositing by learning identity-preserving representation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 8048-8058).‏
+
+4.	‏Zhang, Y., Zheng, X., Liang, W., Zhang, S., & Yuan, X. (2022). Visual surveillance for human fall detection in healthcare IoT. IEEE MultiMedia, 29(1), 36-46.‏
+
+5.	Zi, X., Chaturvedi, K., Braytee, A., Li, J., & Prasad, M. (2023). Detecting human falls in poor lighting: Object detection and tracking approach for indoor safety. Electronics, 12(5), 1259.‏
+
+6.	Nabizade, M., Nacer, N., Lajoie, I., Yahiaoui, R., Auber, F., & Fayad, M. (2025, August). Fall Detection Using LBFD-Net: A Novel CNN-Based Architecture. In 2025 International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA) (pp. 1-6). IEEE.‏
+
+
+---
