@@ -4,8 +4,17 @@ import numpy as np
 from PIL import Image
 from pathlib import Path
 import pandas as pd
+import os
 
-GEN_DIR = "/home/linuxu/Desktop/hi eden/text2img_generate/Stable Diffusion_text2img"
+#change directory to the directory of image u want to measure
+GEN_DIR = "/home/linuxu/Desktop/Generative models evaluation/text2img_generate/Stable Diffusion_text2img"
+
+# output directory
+RESULTS_DIR = "/home/linuxu/Desktop/Generative models evaluation/text2img_generate/results metrics/results text2img physics"
+
+# create directory if it doesn't exist
+os.makedirs(RESULTS_DIR, exist_ok=True)
+
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # ---------------------------
@@ -32,7 +41,7 @@ def load_image(path):
     return Image.open(path).convert("RGB")
 
 def compute_depth(img):
-    img_np = np.array(img)   # PIL → numpy
+    img_np = np.array(img)
 
     input_batch = midas_transform(img_np).to(DEVICE)
 
@@ -78,10 +87,14 @@ for gen_path in gen_paths:
     })
 
 df = pd.DataFrame(results)
-df.to_csv(
-    "Stable Diffusion_text2img_physics_metrics_no_reference.csv",
-    index=False
-)
+
+# name the result file         
+output_csv = RESULTS_DIR + "/Stable Diffusion_text2img_physics_metrics_no_reference.csv"
+
+df.to_csv(output_csv, index=False)
+
+print("Results saved to:", output_csv)
 print(df)
+
 print("\n=== Global Averages ===")
 print(df.mean(numeric_only=True))

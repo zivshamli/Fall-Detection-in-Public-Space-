@@ -8,8 +8,12 @@ import pandas as pd
 # -----------------------------
 # Settings
 # -----------------------------
-IMAGE_DIR = "/home/linuxu/Desktop/hi eden/text2img_generate/Stable Diffusion_text2img"               # directory containing your images
-RESULT_DIR = "result"              # output directory
+
+#change directory to the directory of image u want to measure
+IMAGE_DIR = "/home/linuxu/Desktop/Generative models evaluation/text2img_generate/Stable Diffusion_text2img" 
+# output directory
+RESULT_DIR = "/home/linuxu/Desktop/Generative models evaluation/text2img_generate/results metrics/results text2img quality metric"   
+# name the result file         
 OUTPUT_CSV = os.path.join(RESULT_DIR, "result Stable Diffusion_text2img .csv")
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
