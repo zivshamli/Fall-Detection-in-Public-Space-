@@ -171,6 +171,43 @@ Used for joint fine-tuning experiments.
 - Link: [Combined Synthetic Dataset](https://drive.google.com/drive/folders/1exBLVg8oqrWU98lZD3bgMLcxzKFPHUWR?usp=sharing)
 
 ---
+## 📦 Pretrained LBFD-Net Models
+
+To simplify reproduction of our results and avoid the need to retrain the models from scratch, we provide several pretrained versions of LBFD-Net. These include the baseline model and multiple fine-tuned models trained on different synthetic datasets.
+
+Using these pretrained weights allows you to directly evaluate, test, and compare model performance without performing the computationally expensive fine-tuning process.
+
+
+### 🧱 Baseline Model
+
+* **Base model:** LBFD-Net pretrained on indoor fall detection dataset.
+
+🔗 Download:  
+[Baseline LBFD-Net](https://drive.google.com/file/d/1xg7kkB-gS4vR4WwMTuaj-WCVeQR7Dy3y/view?usp=drive_link)
+
+
+### 🔧 Fine-Tuned Models
+
+The following models were fine-tuned on synthetic datasets generated using different generative approaches:
+
+#### 1. LBFD-Net fine-tuned on Inpainting Dataset
+🔗 Download:  
+[LBFD-Net Inpainting Fine-Tuned](https://drive.google.com/drive/folders/1VrsL3T8XwnJ_b3o2n4YhnJiKqUvevq25?usp=sharing)
+
+#### 2. LBFD-Net fine-tuned on Stable Diffusion Dataset
+🔗 Download:  
+[LBFD-Net Stable Diffusion Fine-Tuned](https://drive.google.com/drive/folders/1M4JN3QN6JI1HL_4GArmocOY2JzXoXIXX?usp=sharing)
+
+#### 3. LBFD-Net fine-tuned on Nano Banana Dataset
+🔗 Download:  
+[LBFD-Net Nano Banana Fine-Tuned](https://drive.google.com/drive/folders/11OinO8Dn_lX-4ijNNdg7DNTI7jRGezNn?usp=sharing)
+
+#### 4. LBFD-Net fine-tuned on All Synthetic Datasets Combined
+🔗 Download:  
+[LBFD-Net Combined Synthetic Fine-Tuned](https://drive.google.com/drive/folders/1MutciXfU9ZNelC8mUxNPXY01clVImDAV?usp=sharing)
+
+---
+
 
 ## ⚙️ Installation
 
