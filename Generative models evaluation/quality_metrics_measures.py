@@ -33,7 +33,6 @@ nima = pyiqa.create_metric('nima').to(device)
 
 # -----------------------------
 # Scan directory
-
 # -----------------------------
 images = [f for f in os.listdir(IMAGE_DIR) if f.lower().endswith((".png", ".jpg", ".jpeg"))]
 
